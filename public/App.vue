@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <nav-bar-component></nav-bar-component>
     <h1>Build up Vue app</h1>
     
@@ -19,8 +19,21 @@ export default {
 </script>
 
 <style lang="sass">
-  h1
-    color: red
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit;
+
+h1
+  color: red
 </style>
+
+<style lang="sass" scoped>
+  .main
+    display: grid
+    grid-template-rows: 40px 500px 500px 500px 30px
+</style>
+
 
 

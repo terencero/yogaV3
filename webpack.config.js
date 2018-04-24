@@ -1,5 +1,6 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 
@@ -52,6 +53,13 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('style.css'),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        sass: {
+          import: [path.resolve(__dirname, './src/styles/index.sass')]
+        }
+      }
+    })
     // new webpack.DefinePlugin({
     //   'process.env': {
     //     NODE_ENV: JSON.stringify('development')
