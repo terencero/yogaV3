@@ -3,7 +3,7 @@ const rp = require('request-promise-native');
 const express = require('express');
 // dependency for request-promise
 const request = require('request');
-const keys = require('../keys');
+const keys = require('../../keys');
 // call Router function on express and assign to const router to export on "router" file with all route paths
 const router = express.Router();
 
@@ -37,7 +37,7 @@ router.get('/yogaInstagram', function (req, res) {
     });
 });
 
-router.get('/yogaYouTube', function(req, res) {
+router.get('/yogaYouTube', function (req, res) {
   let options = {
     method: 'GET',
     uri: `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=oLZ0GFg9hgk&key=${youTubeKey}`,
@@ -50,8 +50,8 @@ router.get('/yogaYouTube', function(req, res) {
     json: true // Automatically stringifies the body to JSON
   };
 
-  rp(options).then( function(response) {
-    console.log('youtube data>>',response);
+  rp(options).then(function (response) {
+    console.log('youtube data>>', response);
     res.json(response);
   }).catch((err) => {
     console.log(err);

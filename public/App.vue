@@ -1,10 +1,17 @@
 <template>
   <div class="main">
     <nav-bar-component></nav-bar-component>
-    <h1>Build up Vue app</h1>
-    <router-view></router-view>
-    <div>another row?</div>
-    
+    <div>
+    <h1>Yoga with Jiwoo</h1>
+      hero placeholder
+    </div>
+    <!-- <router-view></router-view> -->
+    <div>
+      classes placeholder
+    </div>
+    <div>
+      social images placeholder
+    </div>
   </div>
 </template>
 
