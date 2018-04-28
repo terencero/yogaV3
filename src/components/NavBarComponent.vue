@@ -4,7 +4,7 @@
      <a href="">Schedule</a>
      <a href="">Social</a>
      <a href="">Notes from the Mat</a>
-     <a href="">About</a>
+     <router-link to='/about'>about</router-link>
    </nav>
 </template>
 

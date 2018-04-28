@@ -5,7 +5,7 @@ import About from '../components/About';
 Vue.use(VueRouter);
 
 export default new VueRouter({
-  routes = [{
+  routes: [{
     path: '/about',
     component: About,
   }]
