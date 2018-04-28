@@ -2,6 +2,7 @@
   <div class="main">
     <nav-bar-component></nav-bar-component>
     <h1>Build up Vue app</h1>
+    <div>another row?</div>
     
   </div>
 </template>
