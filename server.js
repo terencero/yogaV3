@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const routes = require('./controllers/api/yoga-controller');
 
 const app = express();
 
@@ -24,7 +25,7 @@ app.get('/', function(req, res) {
 });
 
 // need to setup routes
-// app.use('/', routes);
+app.use('/', routes);
 
 // Listener
 app.listen(PORT, function() {

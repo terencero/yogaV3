@@ -11,6 +11,7 @@
     </div>
     <div>
       social images placeholder
+      <social></social>
     </div>
   </div>
 </template>
@@ -18,12 +19,13 @@
 <script>
 import About from '../src/components/About.vue';
 import NavBarComponent  from '../src/components/NavBarComponent.vue';
+import Social from '../src/components/Social.vue';
 export default {
   name: 'app',
   data() {
     return {};
   },
-  components: { NavBarComponent },
+  components: { NavBarComponent, Social },
 }
 </script>
 
