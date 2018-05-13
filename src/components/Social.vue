@@ -15,17 +15,28 @@ import axios from "axios";
 function getInstagramPosts() {
   axios
     .get("/yogaInstagram")
-    .then(resp => {
-      console.log("instagram res", resp);
+    .then(res => {
+      console.log("instagram res", res);
     })
-    .catch(err => console.log('log error',err));
+    .catch(err => console.log("log error", err));
+}
+
+function getYouTubePosts() {
+  axios
+    .get("/yogaYouTube")
+    .then(res => {
+      console.log("youtube res", res);
+    })
+    .catch(err => console.log("log error", err));
 }
 export default {
   beforeMount() {
     this.getInstagramPosts();
+    this.getYouTubePosts();
   },
   methods: {
-    getInstagramPosts
+    getInstagramPosts,
+    getYouTubePosts
   }
 };
 </script>
