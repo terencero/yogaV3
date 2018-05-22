@@ -14,7 +14,7 @@ router.get('/yogaInstagram', function (req, res) {
 
   axios.get(`https://api.instagram.com/v1/users/self/media/recent?count=6&access_token=${instagramKey}`)
   .then((response) => {
-    // console.log(response.data);
+    console.log(response.data);
     res.send(response.data.data);
   })
   .catch((err) => console.log(err));

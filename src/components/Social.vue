@@ -1,6 +1,6 @@
 <template>
   <div class="post-container">
-    <div class="instagram-container">
+    <!-- <div class="instagram-container">
       <div
       class="instagram-post"
       v-for="post in instaPosts"
@@ -21,7 +21,7 @@
           width="480"
           ></iframe>
         </div>
-      </div>
+      </div> -->
   </div>
 </template>
 
@@ -71,8 +71,8 @@ export default {
     };
   },
   beforeMount() {
-    this.getInstagramPosts();
-    this.getYouTubePosts();
+    // this.getInstagramPosts();
+    // this.getYouTubePosts();
   },
   methods: {
     getInstagramPosts,

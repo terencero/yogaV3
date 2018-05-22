@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import router from '../src/config/routes';
-import App from './App.vue';
+import App from '../src/App.vue';
 
 new Vue({
   el: 'app',

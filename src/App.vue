@@ -1,9 +1,9 @@
 <template>
   <div class="main">
     <nav-bar-component></nav-bar-component>
-    <div>
+    <div class="hero">
     <h1>Yoga with Jiwoo</h1>
-      hero placeholder
+      hero placeholder wha?
     </div>
     <!-- <router-view></router-view> -->
     <div>
@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import About from '../src/components/About.vue';
-import NavBarComponent  from '../src/components/NavBarComponent.vue';
-import Social from '../src/components/Social.vue';
+import About from './components/About.vue';
+import NavBarComponent  from './components/NavBarComponent.vue';
+import Social from './components/Social.vue';
 export default {
   name: 'app',
   data() {
@@ -35,15 +35,20 @@ html
 
 *, *:before, *:after
   box-sizing: inherit;
+  margin: 0
 
 h1
   color: red
+  
+.hero
+  background: url('./assets/mat.jpg')
+  // background: #4f374b
 </style>
 
 <style lang="sass" scoped>
-  .main
-    display: grid
-    grid-template-rows: 40px 500px 500px 500px 30px
+.main
+  display: grid
+  grid-template-rows: 40px 500px 500px 500px 30px
 </style>
 
 
