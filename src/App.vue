@@ -2,12 +2,13 @@
   <div class="main">
     <nav-bar-component></nav-bar-component>
     <div class="hero">
-    <h1>Yoga with Jiwoo</h1>
+      <h1>Yoga with Jiwoo</h1>
       hero placeholder wha?
     </div>
     <!-- <router-view></router-view> -->
     <div>
       classes placeholder
+      <schedule></schedule>
     </div>
     <div>
       social images placeholder
@@ -18,15 +19,16 @@
 
 <script>
 import About from './components/About.vue';
-import NavBarComponent  from './components/NavBarComponent.vue';
+import NavBarComponent from './components/NavBarComponent.vue';
 import Social from './components/Social.vue';
+import Schedule from './components/Schedule.vue';
 export default {
-  name: 'app',
+  name: 'App',
+  components: { NavBarComponent, Social, About, Schedule },
   data() {
     return {};
   },
-  components: { NavBarComponent, Social },
-}
+};
 </script>
 
 <style lang="sass">
@@ -41,14 +43,15 @@ h1
   color: red
   
 .hero
-  background: url('./assets/mat.jpg')
+  background: url('./assets/eka.jpg')
+  background-size: cover
   // background: #4f374b
 </style>
 
 <style lang="sass" scoped>
 .main
   display: grid
-  grid-template-rows: 40px 500px 500px 500px 30px
+  grid-template-rows: 40px 800px 800px 800px 30px
 </style>
 
 

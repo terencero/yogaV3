@@ -1,27 +1,27 @@
 <template>
   <div class="post-container">
-    <!-- <div class="instagram-container">
+    <div class="instagram-container">
       <div
-      class="instagram-post"
-      v-for="post in instaPosts"
-      :key="post.id"
+        v-for="post in instaPosts"
+        :key="post.id"
+        class="instagram-post"
       >
         <img :src="post.imageUrl" alt="">
       </div>
     </div>
-      <div class="youtube-container">
-        <div 
-        class="youtube-post"
+    <div class="youtube-container">
+      <div 
         :key="youTubePosts.id"
-        >
-          <iframe 
+        class="youtube-post"
+      >
+        <iframe 
           :src="youTubePosts.videoUrl" 
           frameborder="0"
           height="360"
           width="480"
-          ></iframe>
-        </div>
-      </div> -->
+        ></iframe>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -71,8 +71,8 @@ export default {
     };
   },
   beforeMount() {
-    // this.getInstagramPosts();
-    // this.getYouTubePosts();
+    this.getInstagramPosts();
+    this.getYouTubePosts();
   },
   methods: {
     getInstagramPosts,

@@ -1,11 +1,11 @@
 <template>
-   <nav>
-     <a href="">Yoga</a>
-     <a href="">Schedule</a>
-     <a href="">Social</a>
-     <a href="">Notes from the Mat</a>
-     <router-link to='/about'>about</router-link>
-   </nav>
+  <nav>
+    <a href="">Yoga</a>
+    <a href="">Schedule</a>
+    <a href="">Social</a>
+    <a href="">Notes from the Mat</a>
+    <router-link to="/about">about</router-link>
+  </nav>
 </template>
 
 <script>
@@ -13,6 +13,10 @@ export default {
   data() {
     return {};
   },
-
-}
+};
 </script>
+
+<style lang='sass'>
+  nav
+    justify-self: end
+</style>
