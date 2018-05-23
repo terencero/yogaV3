@@ -6,7 +6,10 @@
         :key="post.id"
         class="instagram-post"
       >
-        <img :src="post.imageUrl" alt="">
+        <img 
+          :src="post.imageUrl" 
+          alt=""
+        >
       </div>
     </div>
     <div class="youtube-container">
@@ -26,36 +29,36 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 function getInstagramPosts() {
   axios
-    .get("/yogaInstagram")
+    .get('/yogaInstagram')
     .then(res => {
-      console.log("instagram res", res);
-      this.assignMedia(res.data, "instagram");
+      // console.log('instagram res', res);
+      this.assignMedia(res.data, 'instagram');
     })
-    .catch(err => console.log("log error", err));
+    .catch(err => console.log('log error', err));
 }
 
 function getYouTubePosts() {
   axios
-    .get("/yogaYouTube")
+    .get('/yogaYouTube')
     .then(res => {
-      console.log("youtube res", res);
-      this.assignMedia(res.data, "youtube");
+      // console.log('youtube res', res);
+      this.assignMedia(res.data, 'youtube');
     })
-    .catch(err => console.log("log error", err));
+    .catch(err => console.log('log error', err));
 }
 
 function assignMedia(data, type) {
-  if (type === "instagram") {
+  if (type === 'instagram') {
     data.map(item => {
       this.instaPosts.push({
         id: item.id,
         imageUrl: item.images.thumbnail.url
       });
     });
-  } else if (type === "youtube") {
+  } else if (type === 'youtube') {
     this.youTubePosts = {
       id: data.items[0].id,
       videoUrl: data.items[0].snippet.thumbnails.high.url
