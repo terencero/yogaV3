@@ -93,5 +93,9 @@ export default {
       grid-template-columns: repeat(3, 150px)
       grid-column-gap: 5px
       grid-template-rows: 1fr 1fr
+      justify-self: center
+
+    .youtube-container
+      justify-self: center
 </style>
 
