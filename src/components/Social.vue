@@ -99,6 +99,7 @@ export default {
       justify-self: center
 
     .youtube-container
-      justify-self: center
+      display: grid
+      justify-items: center
 </style>
 

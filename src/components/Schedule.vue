@@ -15,15 +15,15 @@
         <p>Tuesdays and Thursdays at 9:30 am</p>
         <p>Where?</p>
       </div>
-    </div>
-    <div class="workshops">
-      past and current
       <div class="northshore">
         <h2>Northshore Yoga</h2>
         <p></p>
         <p>Mondays at 7pm</p>
         <p>Evanston NorthShore Yoga Studio</p>
       </div>
+    </div>
+
+    <div class="workshops">
       <h1>Workshops</h1>
       <br />
       <h3>Graceful Vinyasa Transitions</h3>
@@ -56,4 +56,5 @@
   .schedule
     display: grid
     grid-template-columns: 1fr 1fr
+    padding: 20px
 </style>

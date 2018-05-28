@@ -18,5 +18,6 @@ export default {
 
 <style lang='sass'>
   nav
+    // display: grid
     justify-self: end
 </style>

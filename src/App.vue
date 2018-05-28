@@ -8,7 +8,7 @@
     <div class="divider">
       <img 
         src="./assets/lotus-640.png" 
-        width="150px" 
+        width="100px" 
         alt=""></div>
     <!-- <router-view></router-view> -->
     <div>
@@ -18,7 +18,7 @@
     <div class="divider">
       <img 
         src="./assets/lotus-640.png" 
-        width="150px" 
+        width="100px" 
         alt="">
     </div>
     <div>
@@ -62,7 +62,7 @@ h1
 <style lang="sass" scoped>
 .main
   display: grid
-  grid-template-rows: 40px 800px 150px 800px 150px 800px 30px
+  grid-template-rows: 40px 600px 150px 600px 150px 800px 30px
 
   .divider
     justify-self: center
