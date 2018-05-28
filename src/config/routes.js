@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import About from '../components/About';
 import Social from '../components/Social';
 import App from '../App';
+import Schedule from '../components/Schedule';
 
 Vue.use(VueRouter);
 
@@ -16,5 +17,8 @@ export default new VueRouter({
   }, {
     path:'/',
     component: App,
+  }, {
+    path: '/classes',
+    component: Schedule,
   }]
 });

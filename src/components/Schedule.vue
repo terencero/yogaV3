@@ -31,26 +31,43 @@
       <p>When: Date and time</p>
       <p>Where: Evanston NorthShore Yoga Studio</p>
       <br />
-      <p>Learn how to flow and float with stability and fluidity in Surya Namaskara and other Vinyasa transitions. This class will begin with Vinyasa sequences designed to warm up an open up the body while focusing on the core. You will learn how to:</p>
-      <br />
-      <ul>
-        <li>Utilize energy in the arms and legs, and align your body correctly to cultivate the graceful transitions.</li>
-        <li>Use breath and bandha (internal lock/control of energy) to achieve stability and effortlessly move in and out of vinyasas.</li>
-      </ul>
-      <br />
-      <p>Some of the key transitions we will practice on are:</p>
-      <br />
-      <ul>
-        <li>Jumping back/press up to chaturanga</li>
-        <li>Jumping/floating forward to uttanasana</li>
-        <li>Bakasana: Jumping back to chaturanga and jumping in from downward dog</li>
-        <li>Marichyasana: A pick up and jump back</li>
-      </ul>
-      <br />
-      <p>It will be a well-rounded practice with plenty of instructions, demonstrations and opportunity to work and focus on each flow. Designed for all, but some experience in Vinyasa yoga is required. There will be modifications and use of props to suit all levels.</p>
+      <router-link 
+        v-show="!details" 
+        to="/classes">Details</router-link>
+      <div v-show="details">
+        <p>Learn how to flow and float with stability and fluidity in Surya Namaskara and other Vinyasa transitions. This class will begin with Vinyasa sequences designed to warm up an open up the body while focusing on the core. You will learn how to:</p>
+        <br />
+        <ul>
+          <li>Utilize energy in the arms and legs, and align your body correctly to cultivate the graceful transitions.</li>
+          <li>Use breath and bandha (internal lock/control of energy) to achieve stability and effortlessly move in and out of vinyasas.</li>
+        </ul>
+        <br />
+        <p>Some of the key transitions we will practice on are:</p>
+        <br />
+        <ul>
+          <li>Jumping back/press up to chaturanga</li>
+          <li>Jumping/floating forward to uttanasana</li>
+          <li>Bakasana: Jumping back to chaturanga and jumping in from downward dog</li>
+          <li>Marichyasana: A pick up and jump back</li>
+        </ul>
+        <br />
+        <p>It will be a well-rounded practice with plenty of instructions, demonstrations and opportunity to work and focus on each flow. Designed for all, but some experience in Vinyasa yoga is required. There will be modifications and use of props to suit all levels.</p>
+      </div>
     </div>
+
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    details: {
+      type: Boolean,
+      default: true,
+    },
+  },
+};
+</script>
 
 <style lang='sass'>
   .schedule

@@ -1,19 +1,7 @@
 <template>
   <div class="main">
-    <nav-bar-component></nav-bar-component>
     <div class="hero">
       <h1>Yoga with Jiwoo</h1>
-      hero placeholder wha?
-    </div>
-    <div class="divider">
-      <img 
-        src="./assets/lotus-640.png" 
-        width="100px" 
-        alt=""></div>
-    <!-- <router-view></router-view> -->
-    <div>
-      classes placeholder
-      <schedule></schedule>
     </div>
     <div class="divider">
       <img 
@@ -22,7 +10,15 @@
         alt="">
     </div>
     <div>
-      social images placeholder
+      <schedule :details="details"></schedule>
+    </div>
+    <div class="divider">
+      <img 
+        src="./assets/lotus-640.png" 
+        width="100px" 
+        alt="">
+    </div>
+    <div>
       <social></social>
     </div>
   </div>
@@ -37,7 +33,9 @@ export default {
   name: 'App',
   components: { NavBarComponent, Social, About, Schedule },
   data() {
-    return {};
+    return {
+      details: false,
+    };
   },
 };
 </script>
@@ -62,7 +60,7 @@ h1
 <style lang="sass" scoped>
 .main
   display: grid
-  grid-template-rows: 40px 600px 150px 600px 150px 800px 30px
+  grid-template-rows: 600px 100px 600px 100px 800px 30px
 
   .divider
     justify-self: center
