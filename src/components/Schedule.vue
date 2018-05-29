@@ -73,5 +73,6 @@ export default {
   .schedule
     display: grid
     grid-template-columns: 1fr 1fr
-    padding: 20px
+    width: 800px
+    justify-self: center
 </style>

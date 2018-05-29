@@ -46,14 +46,18 @@ html
 
 *, *:before, *:after
   box-sizing: inherit;
-  margin: 0
+  margin: 0 auto
 
 h1
   color: red
+
+.main
+  max-width: 800px
   
 .hero
   background: url('./assets/eka.jpg')
   background-size: cover
+  width: 800px
   // background: #4f374b
 </style>
 
@@ -61,6 +65,7 @@ h1
 .main
   display: grid
   grid-template-rows: 600px 100px 600px 100px 800px 30px
+  justify-content: center
 
   .divider
     justify-self: center
