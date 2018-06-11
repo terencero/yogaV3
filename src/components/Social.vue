@@ -44,7 +44,7 @@ function getYouTubePosts() {
   axios
     .get('/yogaYouTube')
     .then(res => {
-      // console.log('youtube res', res);
+      console.log('youtube res', res);
       this.assignMedia(res.data, 'youtube');
     })
     .catch(err => console.log('log error', err));
@@ -90,6 +90,7 @@ export default {
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: 1fr
+    grid-column-gap: 50px
 
     .instagram-container
       display: grid
@@ -101,5 +102,8 @@ export default {
     .youtube-container
       display: grid
       justify-items: center
+
+    @media (max-width: 1008px)
+      grid-template-columns: 1fr
 </style>
 

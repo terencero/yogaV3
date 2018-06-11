@@ -1,7 +1,7 @@
 <template>
   <div class="main">
+    <nav-bar-component></nav-bar-component>
     <div class="hero">
-      <h1>Yoga with Jiwoo</h1>
     </div>
     <div class="divider">
       <img 
@@ -9,9 +9,7 @@
         width="100px" 
         alt="">
     </div>
-    <div>
-      <schedule :details="details"></schedule>
-    </div>
+    <schedule :details="details"></schedule>
     <div class="divider">
       <img 
         src="./assets/lotus-640.png" 
@@ -46,29 +44,34 @@ html
 
 *, *:before, *:after
   box-sizing: inherit;
-  margin: 0 auto
 
-h1
-  color: red
-
-.main
-  max-width: 800px
-  
-.hero
-  background: url('./assets/eka.jpg')
-  background-size: cover
-  width: 800px
-  // background: #4f374b
 </style>
 
 <style lang="sass" scoped>
 .main
   display: grid
-  grid-template-rows: 600px 100px 600px 100px 800px 30px
+  grid-template-rows: 40px 500px 100px 600px 100px 800px 30px
+  max-width: 800px
+  margin: 0 auto
   justify-content: center
+  // justify-content: center
+
+  .hero
+    background: url('./assets/eka.jpg')
+    background-size: cover
+    width: 800px
+    justify-self: center
+    text-align: center
+    // background: #4f374b
+    h1
+      color: white
 
   .divider
     justify-self: center
+    align-self: center
+
+  // schedule
+  //   justify-self: center
 </style>
 
 

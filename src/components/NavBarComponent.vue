@@ -1,10 +1,9 @@
 <template>
   <nav>
-    <a href="">Yoga</a>
-    <a href="">Schedule</a>
-    <a href="">Social</a>
-    <a href="">Notes from the Mat</a>
-    <router-link to="/about">about</router-link>
+    <router-link to="/">Home</router-link>
+    <router-link to="/classes">Teaching Schedule</router-link>
+    <router-link to="/social">Social</router-link>
+    <router-link to="/about">About</router-link>
   </nav>
 </template>
 
@@ -18,6 +17,13 @@ export default {
 
 <style lang='sass'>
   nav
-    // display: grid
-    justify-self: end
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-columns: repeat(4, 1fr)
+    justify-items: center
+
+    a
+      text-decoration: none
+    &:hover
+      color: blue
 </style>
