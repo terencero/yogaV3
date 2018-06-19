@@ -55,7 +55,7 @@ html
 .main
   display: grid
   grid-template-rows: 80px 40px 500px 100px 600px 100px 800px 30px
-  max-width: 800px
+  // max-width: 800px
   margin: 0 auto
   justify-content: center
 
@@ -63,6 +63,9 @@ html
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-areas: "nav-bar nav-bar"
+    border: grey solid 2px
+    border-right-width: 0
+    border-left-width: 0
     > nav
       grid-area: nav-bar
       justify-self: center
