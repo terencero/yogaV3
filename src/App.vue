@@ -1,6 +1,8 @@
 <template>
   <div class="main">
-    <nav-bar-component></nav-bar-component>
+    <div class="nav-bar">
+      <nav-bar-component></nav-bar-component>
+    </div>
     <div class="hero">
     </div>
     <div class="divider">
@@ -44,7 +46,6 @@ html
 
 *, *:before, *:after
   box-sizing: inherit;
-
 </style>
 
 <style lang="sass" scoped>
@@ -54,7 +55,14 @@ html
   max-width: 800px
   margin: 0 auto
   justify-content: center
-  // justify-content: center
+
+  .nav-bar
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "nav-bar nav-bar"
+    > nav
+      grid-area: nav-bar
+      justify-self: center
 
   .hero
     background: url('./assets/eka.jpg')
@@ -62,16 +70,12 @@ html
     width: 800px
     justify-self: center
     text-align: center
-    // background: #4f374b
     h1
       color: white
 
   .divider
     justify-self: center
     align-self: center
-
-  // schedule
-  //   justify-self: center
 </style>
 
 
