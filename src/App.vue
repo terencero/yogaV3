@@ -1,5 +1,8 @@
 <template>
   <div class="main">
+    <div class="logo">
+      <img src="./assets/lotus-logo.png" height="80px" alt="logo">
+    </div>
     <div class="nav-bar">
       <nav-bar-component></nav-bar-component>
     </div>
@@ -51,7 +54,7 @@ html
 <style lang="sass" scoped>
 .main
   display: grid
-  grid-template-rows: 40px 500px 100px 600px 100px 800px 30px
+  grid-template-rows: 80px 40px 500px 100px 600px 100px 800px 30px
   max-width: 800px
   margin: 0 auto
   justify-content: center
@@ -63,6 +66,9 @@ html
     > nav
       grid-area: nav-bar
       justify-self: center
+
+  .logo
+    justify-self: center
 
   .hero
     background: url('./assets/eka.jpg')
