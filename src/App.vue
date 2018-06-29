@@ -8,6 +8,11 @@
     </div>
     <div class="hero">
     </div>
+    <div class="quote">
+      <h1>Yoga Begins With Listening.</h1>
+      <h3>When we listen, we are giving space to what is.</h3>
+      <p>- Richard Freeman</p>
+    </div>
     <div class="divider">
       <img 
         src="./assets/lotus-640.png" 
@@ -54,7 +59,7 @@ html
 <style lang="sass" scoped>
 .main
   display: grid
-  grid-template-rows: 80px 40px 500px 100px 600px 100px 800px 30px
+  grid-template-rows: 80px 40px 500px 200px 100px 600px 100px 800px 30px
   // max-width: 800px
   margin: 0 auto
   justify-content: center
@@ -81,6 +86,9 @@ html
     text-align: center
     h1
       color: white
+  
+  .quote
+    text-align: center
 
   .divider
     justify-self: center

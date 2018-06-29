@@ -7,7 +7,9 @@
     <div class="profile-image-container">
       <img 
         src="../assets/profile.jpg" 
-        alt="profile picture">
+        alt="profile picture"
+        height="200px"
+      >
     </div>
 
     <div class="content">
@@ -50,7 +52,7 @@ export default {
 <style lang='sass' scoped>
 .about-container
   display: grid
-  grid-template-rows: 40px 100px 1fr
+  grid-template-rows: 40px 100px 355px
   grid-template-columns: 30% 70%
   grid-template-areas: "nav-bar nav-bar" "header header" "image content"
   p

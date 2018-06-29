@@ -3,6 +3,7 @@
     <router-link to="/">Home</router-link>
     <router-link to="/classes">Teaching Schedule</router-link>
     <router-link to="/social">Social</router-link>
+    <router-link to="/tutorials">Tutorials</router-link>
     <router-link to="/about">About</router-link>
   </nav>
 </template>
@@ -19,7 +20,7 @@ export default {
   nav
     display: grid
     grid-template-rows: 1fr
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(5, 1fr)
     justify-items: center
 
     a

@@ -1,13 +1,12 @@
 <template>
   <div class="video-card">
-    <div class="title">Test</div>
+    <div class="title">Eka Padasana</div>
     <div class="video-container">
       <div 
-        :key="youTubePosts.id"
         class="youtube-post"
       >
         <iframe 
-          :src="youTubePosts.videoUrl" 
+          :src="source" 
           frameborder="0"
           height="360"
           width="480"
@@ -18,49 +17,33 @@
 </template>
 
 <script>
-import axios from 'axios';
-function getYouTubePosts() {
-  axios
-    .get('/yogaYouTube')
-    .then(res => {
-      console.log('youtube res', res);
-      this.assignMedia(res.data, 'youtube');
-    })
-    .catch(err => console.log('log error', err));
-}
-
-function assignMedia(data, type) {
-  if (type === 'instagram') {
-    data.map(item => {
-      this.instaPosts.push({
-        id: item.id,
-        imageUrl: item.images.thumbnail.url
-      });
-    });
-  } else if (type === 'youtube') {
-    this.youTubePosts = {
-      id: data.items[0].id,
-      videoUrl: data.items[0].snippet.thumbnails.high.url
-    };
-  }
-}
-
 export default {
+  name: 'VideoCard',
+  components: {},
+  props: {
+    id: {
+      type: String,
+      default: null,
+    },
+    source: {
+      type: String,
+      default: null,
+    },
+  },
   data() {
-    return {
-      instaPosts: [],
-      youTubePosts: null
+    return{
+
     };
-  },
-  beforeMount() {
-    this.getYouTubePosts();
-  },
-  methods: {
-    getYouTubePosts,
-    assignMedia
   }
 };
 </script>
 
-<style>
+<style lang='sass' scoped>
+.video-card
+  border: 2px solid grey
+  width: 500px
+  
+  .video-container
+    display: grid
+    justify-content: center
 </style>
