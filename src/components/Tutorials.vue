@@ -2,14 +2,18 @@
   <div class="tutorials-container">
     <nav-bar-component class="nav-bar"></nav-bar-component>
     <h1 class="header">Tutorials</h1>
-    <div class="media-columns">
+    <!-- <div class="media-columns"> -->
       <div class="media-column">
         <video-card
           :source="youTubePosts.videoUrl"
         >{{ youTubePosts}}</video-card>
       </div>
-      <div class="media-colums">empty</div>
-    </div>
+      <div class="media-column">
+        <video-card
+          :source="youTubePosts.videoUrl"
+        >{{ youTubePosts}}</video-card>
+      </div>
+    <!-- </div> -->
   </div>
   
 </template>
@@ -82,7 +86,16 @@ function assignMedia(data, type) {
     grid-area: header
     justify-self: center
 
-  .media-columns
-    grid-area: column1 column2
+  // .media-columns
+  //   justify-self: center
+  .media-column
     justify-self: center
+    
+  div:first-child
+    grid-area: column1
+    
+  div:last-child
+    grid-area: column2
+    
+
 </style>
