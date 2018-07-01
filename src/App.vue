@@ -29,6 +29,7 @@
     <div>
       <social></social>
     </div>
+    <a href="https://www.instagram.com/yogawithjiwoo/"><i class="fab fa-instagram"></i></a>
   </div>
 </template>
 
@@ -51,6 +52,7 @@ export default {
 <style lang="sass">
 html
   box-sizing: border-box
+  color: #6c6c6c
 
 *, *:before, *:after
   box-sizing: inherit;
@@ -68,7 +70,7 @@ html
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-areas: "nav-bar nav-bar"
-    border: grey solid 2px
+    border: #e2e2e2 solid 2px
     border-right-width: 0
     border-left-width: 0
     > nav
@@ -84,8 +86,6 @@ html
     width: 800px
     justify-self: center
     text-align: center
-    h1
-      color: white
   
   .quote
     text-align: center

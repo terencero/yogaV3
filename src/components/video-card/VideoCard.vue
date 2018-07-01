@@ -40,8 +40,12 @@ export default {
 
 <style lang='sass' scoped>
 .video-card
-  border: 2px solid grey
+  border: 2px solid #5cc4c8
   width: 500px
+  box-shadow: 5px 2px grey
+
+  .title
+    padding: 2px 0 2px 2px
   
   .video-container
     display: grid

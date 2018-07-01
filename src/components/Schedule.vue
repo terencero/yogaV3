@@ -85,9 +85,11 @@ export default {
 
     .class-schedule
       grid-area: class-schedule
+      margin: 0 20px
 
     .workshops
       grid-area: workshops
+      margin: 0 20px
 
     @media (max-width: 1008px)
       grid-template-columns: 1fr

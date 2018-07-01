@@ -5,7 +5,7 @@
     <!-- <div class="media-columns"> -->
       <div class="media-column">
         <video-card
-          :source="youTubePosts.videoUrl"
+          :source="srcUrl"
         >{{ youTubePosts}}</video-card>
       </div>
       <div class="media-column">
@@ -31,6 +31,7 @@ export default {
     return {
       instaPosts: [],
       youTubePosts: {},
+      srcUrl: '',
     };
   },
   beforeMount() {
@@ -65,6 +66,7 @@ function assignMedia(data, type) {
       id: data.items[0].id,
       videoUrl: data.items[0].snippet.thumbnails.high.url
     };
+    this.srcUrl = `https://www.youtube.com/embed/${this.youTubePosts.id}`;
   }
 }
 </script>
@@ -90,7 +92,7 @@ function assignMedia(data, type) {
   //   justify-self: center
   .media-column
     justify-self: center
-    
+
   div:first-child
     grid-area: column1
     
